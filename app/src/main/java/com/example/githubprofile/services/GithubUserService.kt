@@ -1,0 +1,18 @@
+package com.example.githubprofile.services
+
+import com.example.githubprofile.models.GithubUser
+import retrofit2.Call
+import retrofit2.http.GET
+import retrofit2.http.Path
+
+interface GithubUserService {
+    @GET("users/{username}")
+    fun loginUser(
+        @Path("username") username: String
+    ): Call<GithubUser>
+
+    @GET("users/{username}")
+    fun getUser(
+        @Path("username") username: String
+    ): Call<GithubUser>
+}
